@@ -38,12 +38,12 @@
 \section{特征提取及匹配}
 \subsection{Harris角点检测}
 
-\begin{flalign}
+\begin{flalign*}
 && E(u, v) &= \sum_{(x,y)}^{} w(x,y)[I(x+u,y+v)-I(x,y)]^2 &&  \\
-\text{一阶泰勒展开} && &\approx \sum_{(x,y)}^{} w(x,y)[I(x,y)+\frac{\partial I}{\partial x}(x,y)u +\frac{\partial I}{\partial y}(x,y)v-I(x,y)]^2 && \marginnote{这是旁注}\\
+\text{对}I(x+u,y+v)\text{一阶泰勒展开} && &\approx \sum_{(x,y)}^{} w(x,y)[I(x,y)+\frac{\partial I}{\partial x}(x,y)u +\frac{\partial I}{\partial y}(x,y)v-I(x,y)]^2 &&\\
 \text{UV分解} && &= \begin{bmatrix}u \\v\end{bmatrix}^T H \begin{bmatrix}u \\v\end{bmatrix} 
 &&
-\end{flalign}
+\end{flalign*}
 
 Hello world! Hello Ali! As shown in figure
 
