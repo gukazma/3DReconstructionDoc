@@ -7,13 +7,13 @@
 \graphicspath{{Figures/}}%文章所用图片在当前目录下的 Figures目录
 
 \usepackage{hyperref} % 对目录生成链接，注：该宏包可能与其他宏包冲突，故放在所有引用的宏包之后
+\usepackage{amsmath}
 \hypersetup{colorlinks = true,  % 将链接文字带颜色
 	bookmarksopen = true, % 展开书签
 	bookmarksnumbered = true, % 书签带章节编号
 	pdftitle = 基于图像的三维重建学习笔记, % 标题
 	pdfauthor =Gukazma} % 作者
 \bibliographystyle{plain}% 参考文献引用格式
-\newcommand{\upcite}[1]{\textsuperscript{\cite{#1}}}
 
 \renewcommand{\contentsname}{\centerline{Contents}} %经过设置word格式后，将目录标题居中
 
@@ -34,9 +34,14 @@
 \tableofcontents
 
 \section{特征提取及匹配}
-Hello world! Hello Ali! As shown in figure \ref{1}
+\subsection{Harris角点检测}
+
+\begin{flalign}
+\text{这是第一条公式} && E(u, v) &= \sum_{(x,y)}^{} w(x,y)[I(x+u,y+v)-I(x,y)]^2 &&  \\
+\text{这是第二条公式} && &\approx \sum_{(x,y)}^{} w(x,y)[I(x,y)+\frac{\partial I}{\partial x}(x,y)u +\frac{\partial I}{\partial y}(x,y)v-I(x,y)]^2 &&
+\end{flalign}
+Hello world! Hello Ali! As shown in figure
 
 
-这句话是测试能否进行引用及支持中文\upcite{1}。
 \bibliography{books}
 \end{document}
