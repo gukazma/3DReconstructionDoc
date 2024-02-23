@@ -10,6 +10,8 @@
 \usepackage{amsmath}
 \usepackage{mathtools}
 \usepackage{marginnote}
+\usepackage{tcolorbox}
+
 \hypersetup{colorlinks = true,  % 将链接文字带颜色
 	bookmarksopen = true, % 展开书签
 	bookmarksnumbered = true, % 书签带章节编号
@@ -44,9 +46,19 @@
 \text{UV分解} && &= \begin{bmatrix}u \\v\end{bmatrix}^T H \begin{bmatrix}u \\v\end{bmatrix} 
 &&
 \end{flalign*}
+\begin{tcolorbox}
+二元函数函数泰勒展开推导：
+\begin{flalign*}
+f(x,y) &\approx f(x_0,y_0) + f_{x}'(x_0,y_0)(x-x_0)	+ f_{y}'(x_0,y_0)(y-y_0)\\
+\text{令$x=x+u,y=y+v$:}\\ 
+f(x+u,y+v) &\approx f(x_0,y_0) + f_{x}'(x_0,y_0)(x+u-x_0)+f_{y}'(x_0,y_0)(y+v-y_0)\\
+\text{令$x_0=x,y_0=y$:}\\ 
+&= f(x,y) + f_{x}'(x,y)(x+u-x)+f_{y}'(x,y)(y+v-y)\\
+&= f(x,y) + f_{x}'(x,y)u+f_{y}'(x,y)v
+\end{flalign*}
 
-Hello world! Hello Ali! As shown in figure
 
+\end{tcolorbox}
 
 \bibliography{books}
 \end{document}
