@@ -8,6 +8,8 @@
 
 \usepackage{hyperref} % 对目录生成链接，注：该宏包可能与其他宏包冲突，故放在所有引用的宏包之后
 \usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{marginnote}
 \hypersetup{colorlinks = true,  % 将链接文字带颜色
 	bookmarksopen = true, % 展开书签
 	bookmarksnumbered = true, % 书签带章节编号
@@ -38,10 +40,11 @@
 
 \begin{flalign}
 && E(u, v) &= \sum_{(x,y)}^{} w(x,y)[I(x+u,y+v)-I(x,y)]^2 &&  \\
-\text{一阶泰勒展开} && &\approx \sum_{(x,y)}^{} w(x,y)[I(x,y)+\frac{\partial I}{\partial x}(x,y)u +\frac{\partial I}{\partial y}(x,y)v-I(x,y)]^2 && \\
+\text{一阶泰勒展开} && &\approx \sum_{(x,y)}^{} w(x,y)[I(x,y)+\frac{\partial I}{\partial x}(x,y)u +\frac{\partial I}{\partial y}(x,y)v-I(x,y)]^2 && \marginnote{这是旁注}\\
 \text{UV分解} && &= \begin{bmatrix}u \\v\end{bmatrix}^T H \begin{bmatrix}u \\v\end{bmatrix} 
 &&
 \end{flalign}
+
 Hello world! Hello Ali! As shown in figure
 
 
