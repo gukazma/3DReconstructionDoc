@@ -58,3 +58,18 @@
 当前像素值大于这相邻的其它47个像素值，则该点为极值点。
 
 \textbf{通过泰勒展开近似查找亚像素DoG空间离散极值点：} 
+
+利用二阶泰勒近似寻找极值点
+
+\begin{flalign*}
+\text{对$f(x_0)$进行泰勒二阶展开近似}\\ 
+f(x) &\approx f(x_0) + \nabla f(x_0)^T(x-x_0) + \frac{1}{2}(x-x_0)^T\nabla^2f(x_0)(x-x_0) \\
+\text{剔除常数项$f(x_0)$，并令$\delta x=x-x_0$得：}\\ 
+f(\delta x) &= \nabla f(x_0)^T\delta x + \frac{1}{2}\delta x^T\nabla^2f(x_0)\delta x \\
+\text{求一阶导,并令其为0:}\\ 
+\frac{\partial f(\delta x)}{\partial \delta x} &= \nabla f^T(x_0) + \nabla^2f(x_0)\delta x = 0 \\
+\text{整理上式得：}\\ 
+\delta x &= -\nabla^2 f(x_0)^{-1} \nabla f^T(x_0)
+\end{flalign*}
+
+其中$\delta x$为在$x_0$点的近似极值点。
