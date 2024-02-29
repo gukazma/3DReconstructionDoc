@@ -4,6 +4,7 @@
 \usepackage{setspace}
 \usepackage{lipsum}
 \usepackage{graphicx}%插入图片
+\usepackage{subcaption}
 \graphicspath{{Figures/}}%文章所用图片在当前目录下的 Figures目录
 
 \usepackage{hyperref} % 对目录生成链接，注：该宏包可能与其他宏包冲突，故放在所有引用的宏包之后
@@ -41,5 +42,7 @@
 \section{特征提取及匹配}
 \subsection{特征提取}
 \input{FeatureDetectAndMatch/Harris.tex}
+\input{FeatureDetectAndMatch/LoG.tex}
+\input{FeatureDetectAndMatch/DoG_SIFT.tex}
 \bibliography{books}
 \end{document}
