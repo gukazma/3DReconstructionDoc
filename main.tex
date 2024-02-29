@@ -86,5 +86,16 @@ Harris 矩阵H的特征值分析：
 	\item $\lambda_1, \lambda_2 > 0$ 兴趣点位于角点区域。
 \end{itemize}
 
+Harris角点准则：
+\begin{equation*}
+	C = det(H) - ktrac(H)^2 = \lambda_1\lambda_2 - k(\lambda_1 + \lambda_2)^2, k = 0.04
+\end{equation*}
+\begin{itemize}[leftmargin=2cm]
+	\item k的值越小， 检测子越敏感
+	\item 只有当$\lambda_1$和$\lambda_2$同时取得最大值时，C才能取得最大值
+	\item 避免了特征值分解，提高检测效率
+\end{itemize}
+这里使用非极大值抑制（Non-maximal Suppression）
+选取局部响应最大值，避免重复的检测。
 \bibliography{books}
 \end{document}
