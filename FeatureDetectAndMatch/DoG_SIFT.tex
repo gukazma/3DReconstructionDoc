@@ -107,3 +107,22 @@ f(\delta x) &= \nabla f(x_0)^T\delta x + \frac{1}{2}\delta x^T\nabla^2f(x_0)\del
 \begin{equation*}
     I^* = \frac{I-u}{\sigma}
 \end{equation*}
+
+
+特征描述符：
+
+统计局部梯度信息，将区域划分成4x4的block，每个block内统计梯度方向的直方图(高斯加权梯度
+作为系数)
+
+\begin{figure}[h]
+    \centering
+    \includegraphics{特征描述符.png}
+    \caption{特征描述符}
+\end{figure}
+
+
+\begin{figure}[h]
+    \centering
+    \includegraphics{特征描述符直方图.png}
+    \caption{特征描述符直方图}
+\end{figure}
