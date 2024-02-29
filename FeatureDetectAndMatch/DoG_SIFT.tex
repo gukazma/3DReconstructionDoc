@@ -81,3 +81,29 @@ f(\delta x) &= \nabla f(x_0)^T\delta x + \frac{1}{2}\delta x^T\nabla^2f(x_0)\del
 \begin{equation*}
     \frac{trace(\boldsymbol{H})}{Det(\boldsymbol{H})} < \frac{(r+1)^2}{r}, r=10
 \end{equation*}
+
+计算主方向：
+
+\begin{figure}[h]
+    \centering
+    \includegraphics{SIFT主方向.png}
+    \caption{SIFT主方向}
+\end{figure}
+
+计算一个锚点周围$8x8$个像素的8个方向的梯度，并取每个像素的最大梯度值的方向作为该像素的方向，
+计算得到角度直方图，取最大值作为主方向。
+
+\begin{figure}[h]
+    \centering
+    \includegraphics{SIFT主方向旋转.png}
+    \caption{SIFT主方向旋转}
+\end{figure}
+
+为了使得特征点具有旋转不变性，需要图像向主方向旋转。
+
+
+为了使得特征具有亮度不变性，故需要对每个像素减去均值并除以方差
+
+\begin{equation*}
+    I^* = \frac{I-u}{\sigma}
+\end{equation*}
