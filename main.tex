@@ -11,6 +11,7 @@
 \usepackage{mathtools}
 \usepackage{marginnote}
 \usepackage{tcolorbox}
+\usepackage{enumitem}
 
 \hypersetup{colorlinks = true,  % 将链接文字带颜色
 	bookmarksopen = true, % 展开书签
@@ -74,6 +75,16 @@ H=
     \caption{Harris矩阵特征椭圆形}
     \label{fig:harrisShape}
 \end{figure}
+
+Harris 矩阵H的特征值分析：
+\begin{equation*}
+	SVD(H) = U \sum V, (\lambda_1, \lambda_2), \lambda_1 > \lambda_2
+\end{equation*}
+\begin{itemize}[leftmargin=2cm]
+	\item $\lambda_1 \approx \lambda_2$ 兴趣点位于光滑区域;
+	\item $\lambda_1 > 0  \lambda_2 \approx 0$ 兴趣点位于边缘区域;$\lambda_1 > 0  \lambda_2 \approx 0$ 兴趣点位于边缘区域;
+	\item $\lambda_1, \lambda_2 > 0$ 兴趣点位于角点区域。
+\end{itemize}
 
 \bibliography{books}
 \end{document}
