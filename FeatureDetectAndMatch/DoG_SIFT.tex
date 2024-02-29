@@ -73,3 +73,11 @@ f(\delta x) &= \nabla f(x_0)^T\delta x + \frac{1}{2}\delta x^T\nabla^2f(x_0)\del
 \end{flalign*}
 
 其中$\delta x$为在$x_0$点的近似极值点。
+
+去除边缘点：
+
+由于DoG在边缘处值较大，所以需要尽量避免检测到图像边缘点。
+
+\begin{equation*}
+    \frac{trace(\boldsymbol{H})}{Det(\boldsymbol{H})} < \frac{(r+1)^2}{r}, r=10
+\end{equation*}
