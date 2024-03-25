@@ -1,0 +1,9 @@
+\subsection{2024/3/22 会议记要}
+
+\begin{itemize}
+    \item OccupancyMap是计算Atlas图纹理坐标怎么计算的。
+    \item Masker是a通道是就是255，不是就是0
+    \item TileVulkanView会将图像分块，根据显存大小进行切块。防止显存溢出。
+    \item MVS的Refine不是计算具体的DZNCC的值，而只是计算DZNCC的符号，就是近似。
+    \item 由于refine只会沿着法线移动顶点，那么阴影的地方的refine就不会收敛，就会一直沿着某个方向进行refine。
+\end{itemize}
