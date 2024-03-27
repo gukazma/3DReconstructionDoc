@@ -1,13 +1,13 @@
-\subsection{2024/3/22 会议记要}
+\subsection{2024/3/25 会议记要}
 
 \begin{itemize}
     \item 用图像构网的顶点将激光点云的顶点融合，最后再用FSSR进行构网。
     \item 点云的分辨率不高，所以会导致贴图出现黑斑。
     \item 武大的纹理贴图在激光点云的效果要比MVS的要好，空中拍照，地面点云效果好
     \item 地面拍照加地面点云会出问题
-    \item TextureMapping/Shader/Vulkan/water_png.h
+    \item $ TextureMapping/Shader/Vulkan/water_png.h $
     \item 有两种方式进入武大的纹理增强，一个是从头跑到尾，一个是重置。
-    \item matchpair.bin（新 用于密集匹配）和matchpair_.bin(旧 用于贴图),因为航飞数据用原来的相对会造成路面不平。
+    \item $ matchpair.bin $（新 用于密集匹配）和$matchpair_.bin$(旧 用于贴图),因为航飞数据用原来的相对会造成路面不平。
     \item 激光雷达的尺度信息就是采样率，一个是点云颜色。
     \item Run函数都是分阶段在Worker中调用
 \end{itemize}
